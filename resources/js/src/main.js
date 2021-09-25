@@ -52,7 +52,7 @@ import router from './routes'
 
 
 // Vuex Store
-  // import store from './store/store'
+import store from './store/store'
 
 
 // i18n

@@ -31,4 +31,4 @@ require('./bootstrap');
 //     el: '#app',
 // });
 
-import './src/main.js'
+require('./src/main.js');
