@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('application');
 });
+
+Route::get('/{any}', function () {
+    return view('application');
+});
+
+
+// Route::get('/{any}', 'ApplicationController')->where('any', '.*');
