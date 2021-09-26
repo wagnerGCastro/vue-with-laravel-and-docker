@@ -32,32 +32,33 @@ const router = new Router({
     return { x: 0, y: 0 };
   },
   routes: [
-    { 
-      path: '/',    
-      name: 'index',   
-      component: () => import("@/components/ExampleComponent.vue"),
-    },
+    // { 
+    //   path: '/',    
+    //   name: 'index',   
+    //   component: () => import("@/components/ExampleComponent.vue"),
+    // },
+
+    
+    // =============================================================================
+    // MAIN LAYOUT ROUTES
+    // =============================================================================
     {
-      // =============================================================================
-      // MAIN LAYOUT ROUTES
-      // =============================================================================
-      path: "/example",
+      path: '',
       component: () => import("@/layouts/main/Main.vue"),
-      name: "example",
 
       children: [
         // =============================================================================
         // Teste Routes
         // =============================================================================
-        {
-          path: "",
-          redirect: "/example1",
-        },
-        {
-          path: "/example1",
-          name: "example1",
-          component: () => import("@/components/ExampleComponent.vue"),
-        },
+        // {
+        //   path: "",
+        //   redirect: "/example1",
+        // },
+        // {
+        //   path: "/example1",
+        //   name: "example1",
+        //   component: () => import("@/components/ExampleComponent.vue"),
+        // },
 
         // =============================================================================
         // Theme Routes
@@ -1362,103 +1363,103 @@ const router = new Router({
     // =============================================================================
     // FULL PAGE LAYOUTS
     // =============================================================================
-    // {
-    //   path: "",
-    //   component: () => import("@/layouts/full-page/FullPage.vue"),
-    //   children: [
-    //     // =============================================================================
-    //     // PAGES
-    //     // =============================================================================
-    //     {
-    //       path: "/callback",
-    //       name: "auth-callback",
-    //       component: () => import("@/views/Callback.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/login",
-    //       name: "page-login",
-    //       component: () => import("@/views/pages/login/Login.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/register",
-    //       name: "page-register",
-    //       component: () => import("@/views/pages/register/Register.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/forgot-password",
-    //       name: "page-forgot-password",
-    //       component: () => import("@/views/pages/ForgotPassword.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/reset-password",
-    //       name: "page-reset-password",
-    //       component: () => import("@/views/pages/ResetPassword.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/lock-screen",
-    //       name: "page-lock-screen",
-    //       component: () => import("@/views/pages/LockScreen.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/comingsoon",
-    //       name: "page-coming-soon",
-    //       component: () => import("@/views/pages/ComingSoon.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/error-404",
-    //       name: "page-error-404",
-    //       component: () => import("@/views/pages/Error404.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/error-500",
-    //       name: "page-error-500",
-    //       component: () => import("@/views/pages/Error500.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/not-authorized",
-    //       name: "page-not-authorized",
-    //       component: () => import("@/views/pages/NotAuthorized.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //     {
-    //       path: "/pages/maintenance",
-    //       name: "page-maintenance",
-    //       component: () => import("@/views/pages/Maintenance.vue"),
-    //       meta: {
-    //         rule: "editor",
-    //       },
-    //     },
-    //   ],
-    // },
+    {
+      path: "",
+      component: () => import("@/layouts/full-page/index.vue"),
+      children: [
+        // =============================================================================
+        // PAGES
+        // =============================================================================
+        // {
+        //   path: "/callback",
+        //   name: "auth-callback",
+        //   component: () => import("@/views/Callback.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        {
+          path: "/login",
+          name: "login",
+          component: () => import("@/pages/login/index.vue"),
+          // meta: {
+          //   rule: "editor",
+          // },
+        },
+        // {
+        //   path: "/pages/register",
+        //   name: "page-register",
+        //   component: () => import("@/views/pages/register/Register.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/forgot-password",
+        //   name: "page-forgot-password",
+        //   component: () => import("@/views/pages/ForgotPassword.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/reset-password",
+        //   name: "page-reset-password",
+        //   component: () => import("@/views/pages/ResetPassword.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/lock-screen",
+        //   name: "page-lock-screen",
+        //   component: () => import("@/views/pages/LockScreen.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/comingsoon",
+        //   name: "page-coming-soon",
+        //   component: () => import("@/views/pages/ComingSoon.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/error-404",
+        //   name: "page-error-404",
+        //   component: () => import("@/views/pages/Error404.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/error-500",
+        //   name: "page-error-500",
+        //   component: () => import("@/views/pages/Error500.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/not-authorized",
+        //   name: "page-not-authorized",
+        //   component: () => import("@/views/pages/NotAuthorized.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+        // {
+        //   path: "/pages/maintenance",
+        //   name: "page-maintenance",
+        //   component: () => import("@/views/pages/Maintenance.vue"),
+        //   meta: {
+        //     rule: "editor",
+        //   },
+        // },
+      ],
+    },
 
     // Redirect to 404 page, if no match found
     // {
