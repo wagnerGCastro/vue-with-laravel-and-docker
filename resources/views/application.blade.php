@@ -9,11 +9,16 @@
 
     <title>Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template</title>
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset(mix('css/main.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('css/iconfont.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('css/material-icons/material-icons.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('css/vuesax.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('css/prism-tomorrow.css')) }}">
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     
     <!-- Favicon -->
-    <!-- <link rel="shortcut icon" href="{{ asset('images/logo/favicon.png') }}"> -->
+    <link rel="shortcut icon" href="{{ asset('images/logo/favicon.png') }}">
   </head>
   <body>
     <noscript>

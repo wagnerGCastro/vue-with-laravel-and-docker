@@ -12,8 +12,8 @@ import Vue from 'vue'
 import App from './App.vue'
 
 // Vuesax Component Framework
-  // import Vuesax from 'vuesax'
-  // Vue.use(Vuesax)
+  import Vuesax from 'vuesax'
+  Vue.use(Vuesax)
 
 
 // axios
@@ -27,12 +27,10 @@ import App from './App.vue'
   // import './fake-db/index.js'
 
 // Theme Configurations
-  // import '../themeConfig.js'
-
+  import './plugins/theme.config.js'
 
 // Firebase
   // import '@/firebase/firebaseConfig'
-
 
 // Auth0 Plugin
   // import AuthPlugin from './plugins/auth'
@@ -42,18 +40,15 @@ import App from './App.vue'
 // ACL
   // import acl from './acl/acl'
 
-
 // Globally Registered Components
-  // import './globalComponents.js'
+import './plugins/components.global.js'
 
 
 // Vue Router
 import router from './routes'
 
-
 // Vuex Store
-import store from './store/store'
-
+import store from './store'
 
 // i18n
   // import i18n from './i18n/i18n'
@@ -62,22 +57,20 @@ import store from './store/store'
 // Vuexy Admin Filters
   // import './filters/filters'
 
-
 // Clipboard
   // import VueClipboard from 'vue-clipboard2'
   // Vue.use(VueClipboard)
-
 
 // Tour
   // import VueTour from 'vue-tour'
   // Vue.use(VueTour)
   // require('vue-tour/dist/vue-tour.css')
 
-
 // VeeValidate
-  // import VeeValidate from 'vee-validate'
-  // Vue.use(VeeValidate)
-
+import VeeValidate from 'vee-validate'
+Vue.use(VeeValidate, {
+  errorBagName: 'vErrors'
+})
 
 // Google Maps
   // import * as VueGoogleMaps from 'vue2-google-maps'
@@ -93,26 +86,22 @@ import store from './store/store'
   // import { VueHammer } from 'vue2-hammer'
   // Vue.use(VueHammer)
 
-
 // PrismJS
-  // import 'prismjs'
-  // import 'prismjs/themes/prism-tomorrow.css'
-
+import 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
 
 // Feather font icon
-  // require('@assets/css/iconfont.css')
-
+require('@assets/css/iconfont.css')
 
 // Vue select css
 // Note: In latest version you have to add it separately
-// import 'vue-select/dist/vue-select.css';
-
+import 'vue-select/dist/vue-select.css';
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
-  // store,
+  store,
   // i18n,
   // acl,
   render: h => h(App)
